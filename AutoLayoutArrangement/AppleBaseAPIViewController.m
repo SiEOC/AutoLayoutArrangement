@@ -19,7 +19,8 @@
 
 @implementation AppleBaseAPIViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.redView = [UIView new];
@@ -38,7 +39,7 @@
     [self.view addSubview:self.blueView];
     
     self.yellowView = [UIView new];
-    self.yellowView.backgroundColor = [UIColor yellowColor];
+    self.yellowView.backgroundColor = [UIColor blackColor];
     [self.yellowView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.yellowView];
     
@@ -58,7 +59,7 @@
                                                                    constant:0.0];
     [self.view addConstraint:constraint];
     
-    constraint = [NSLayoutConstraint constraintWithItem:self.redView
+    constraint = [NSLayoutConstraint constraintWithItem:self.redView  /*Red is on Top Left (0:Left &  0:Top) */
                                               attribute:NSLayoutAttributeLeft
                                               relatedBy:NSLayoutRelationEqual
                                                  toItem:self.view
@@ -67,7 +68,7 @@
                                                constant:0.0];
     [self.view addConstraint:constraint];
     
-    constraint = [NSLayoutConstraint constraintWithItem:self.greenView
+    constraint = [NSLayoutConstraint constraintWithItem:self.greenView /*Green  is on Second to bottom ( 1:Bottom & 1:Right) */
                                               attribute:NSLayoutAttributeTop
                                               relatedBy:NSLayoutRelationEqual
                                                  toItem:self.redView
@@ -85,7 +86,7 @@
                                                constant:0.0];
     [self.view addConstraint:constraint];
     
-    constraint = [NSLayoutConstraint constraintWithItem:self.blueView
+    constraint = [NSLayoutConstraint constraintWithItem:self.blueView /*Blue  is on bottom ( 0 :B  &  0 :R) */
                                               attribute:NSLayoutAttributeTop
                                               relatedBy:NSLayoutRelationEqual
                                                  toItem:self.greenView
@@ -103,7 +104,7 @@
                                                constant:0.0];
     [self.view addConstraint:constraint];
     
-    constraint = [NSLayoutConstraint constraintWithItem:self.yellowView
+    constraint = [NSLayoutConstraint constraintWithItem:self.yellowView  /* Yellow isSecond from top ( 1:Top & 1:Left) */
                                               attribute:NSLayoutAttributeTop
                                               relatedBy:NSLayoutRelationEqual
                                                  toItem:self.blueView
