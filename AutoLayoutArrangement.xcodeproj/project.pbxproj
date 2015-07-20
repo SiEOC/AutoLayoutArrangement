@@ -456,6 +456,7 @@
 				0166B1D91B2271B500054602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0166B1DA1B2271B500054602 /* Build configuration list for PBXNativeTarget "AutoLayoutArrangementTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				0166B1DC1B2271B500054602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
